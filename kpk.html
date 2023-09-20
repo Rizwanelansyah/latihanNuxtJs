@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let prim = [2];
+        let setPrim = false;
+        let hasilN = [];
+        let hasil = 1;
+        for (let i = 2; i <= 100; i++) {
+          for (let j = i - 1; j > 1; j--) {
+            if (i % j === 0) {
+              setPrim = false;
+              break;
+            } else {
+              setPrim = true;
+            }
+          }
+          if (setPrim) {
+            prim.push(i);
+          }
+        }
+        for (const x of prim) {
+          for (; n % x === 0; ) {
+            n = n / x;
+            hasilN.push(x);
+          }
+        }
+        if (hasilN.filter((dua) => dua == 2).length > 1) {
+          for (const x of hasilN) {
+            hasil = hasil * x;
+          }
+        } else {
+          hasil = hasil * 2;
+          for (const x of hasilN) {
+            if (x != 2) {
+              hasil = hasil * x;
+            }
+          }
+        }
+        return hasil;
+    </script>
+  </body>
+</html>
